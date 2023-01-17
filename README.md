@@ -24,7 +24,6 @@
 
 <p align="center">
   <a href="#-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-deploy">Deploy</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -45,6 +44,7 @@ Habits is an app that helps you create and maintain good habits, allowing you to
 
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
+- [Reactotron](https://infinite.red/reactotron)
 
 ## 💻 Getting started
 
