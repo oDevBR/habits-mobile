@@ -17,6 +17,12 @@ export default function App() {
     Inter_800ExtraBold,
   });
 
+  if (__DEV__) {
+    import("./ReactotronConfig").then(() =>
+      console.log("Reactotron Configured")
+    );
+  }
+
   if (fontsLoading) {
     return <Loading />;
   }
