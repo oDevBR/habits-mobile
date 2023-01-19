@@ -1,11 +1,14 @@
-import { Text, View } from "react-native";
+import { Text, View, ScrollView } from "react-native";
 
-import { DAY_SIZE, HabitDay } from "../components/HabitDay";
-import { Header } from "../components/Header";
 import { generateDAtesFromYearBeginning } from "../utils/generate-dates-from-year-beginning";
+
+import { Header } from "../components/Header";
+import { HabitDay, DAY_SIZE } from "../components/HabitDay";
 
 const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 const datesFromYearStart = generateDAtesFromYearBeginning();
+const minimumSummaryDatesSizes = 18 * 5;
+const amountOfDaysToFill = minimumSummaryDatesSizes - datesFromYearStart.length;
 
 export function Home() {
   return (
@@ -13,22 +16,36 @@ export function Home() {
       <Header />
 
       <View className="flex-row mt-6 mb-2">
-        {weekDays.map((day, index) => (
+        {weekDays.map((weekDay, index) => (
           <Text
-            key={`${day}-${index}`}
-            className="text-zinc-400 text-xl h-10 w-10 font-bold text-center mx-1"
+            key={`${weekDay}-${index}`}
+            className="text-zinc-400 text-xl font-bold text-center mx-1"
             style={{ width: DAY_SIZE }}
           >
-            {day}
+            {weekDay}
           </Text>
         ))}
       </View>
 
-      <View className="flex-row flex-wrap">
-        {datesFromYearStart.map((date) => (
-          <HabitDay key={date.toISOString()} />
-        ))}
-      </View>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 100 }}
+      >
+        <View className="flex-row flex-wrap">
+          {datesFromYearStart.map((date) => (
+            <HabitDay key={date.toISOString()} />
+          ))}
+
+          {amountOfDaysToFill > 0 &&
+            Array.from({ length: amountOfDaysToFill }).map((_, index) => (
+              <View
+                key={index}
+                className="bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800 opacity-40"
+                style={{ width: DAY_SIZE, height: DAY_SIZE }}
+              />
+            ))}
+        </View>
+      </ScrollView>
     </View>
   );
 }
