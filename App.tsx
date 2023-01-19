@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { StatusBar } from "react-native";
 
 import {
@@ -8,7 +7,6 @@ import {
   Inter_800ExtraBold,
   useFonts,
 } from "@expo-google-fonts/inter";
-import LogRocket from "@logrocket/react-native";
 import { Loading } from "./src/components/Loading";
 import { Home } from "./src/screens/Home";
 
@@ -30,10 +28,6 @@ export default function App() {
   if (fontsLoading) {
     return <Loading />;
   }
-
-  useEffect(() => {
-    LogRocket.init("uv2oqm/fifine");
-  }, []);
 
   return (
     <>

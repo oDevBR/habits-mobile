@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.2",
-    "@logrocket/react-native": "^1.10.1",
     "dayjs": "^1.11.7",
     "expo": "~47.0.12",
     "expo-font": "~11.0.1",
