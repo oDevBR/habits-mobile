@@ -4,7 +4,7 @@ import { useRoute } from "@react-navigation/native";
 import dayjs from "dayjs";
 import { BackButton } from "../components/BackButton";
 import { Checkbox } from "../components/Checkbox";
-import { ProgressBar } from "../components/Progress.Bar";
+import { ProgressBar } from "../components/ProgressBar";
 
 interface Params {
   date: string;
