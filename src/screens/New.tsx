@@ -10,8 +10,7 @@ import {
 
 import { Feather } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";
-import { BackButton } from "../components/BackButton";
-import { Checkbox } from "../components/Checkbox";
+import { BackButton, Checkbox } from "../components";
 import { api } from "../lib/axios";
 
 const availableWeekDays = [

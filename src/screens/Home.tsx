@@ -3,9 +3,8 @@ import { Alert, ScrollView, Text, View } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
 import dayjs from "dayjs";
-import { DAY_SIZE, HabitDay } from "../components/HabitDay";
-import { Header } from "../components/Header";
-import { Loading } from "../components/Loading";
+import { HabitDay, Header, Loading } from "../components";
+import { DAY_SIZE } from "../components/HabitDay";
 import { api } from "../lib/axios";
 import { generateDatesFromYearBeginning } from "../utils/generate-dates-from-year-beginning";
 
